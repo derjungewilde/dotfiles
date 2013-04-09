@@ -18,36 +18,10 @@ export COLOR_GRAY='\033[1;30m'
 export COLOR_LIGHT_GRAY='\033[0;37m'
 
 
-#### misc alias
-alias ll='ls -laG'
-alias l.='ls -dl .* --color=auto' #show only hidden files
-alias colorslist="set | egrep 'COLOR_\w*'"  # lists all the colors
-
-alias df='df -h' # Show disk usage
-alias size='du -P -skh *' # Lists folders and files sizes in the current folder
-
-alias h=history
-alias top='top -o cpu' # sort by cpu usage
-
-alias psaux='ps aux'
-alias systail='tail -f /var/log/system.log' 
-alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr" # Shows most used commands
-alias untar="tar xvzf"
-
-alias cp_folder="cp -Rpv" #copies folder and all sub files and folders, preserving security and dates
-
-
-
 
 killhard() {
     kill -9 "$1"
 }
-
-
-
-#### fix double open with entries 
-alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch";open -a XtraFinder'
-
 
 
 #### After each command, checks the windows size and changes lines and columns
@@ -95,4 +69,5 @@ hf(){
 
 #### Bring in the other files
 . ~/.bashrc_help
+. ~/.alias
 
