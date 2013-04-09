@@ -1,3 +1,6 @@
+ #Load in .bashrc -------------------------------------------------
+source ~/.bashrc
+
 # Identify OS and Machine -----------------------------------------
 export OS=`uname -s | sed -e 's/  */-/g;y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/'`
 export OSVERSION=`uname -r`; OSVERSION=`expr "$OSVERSION" : '[^0-9]*\([0-9]*\.[0-9]*\)'`
@@ -11,6 +14,5 @@ echo -e "${COLOR_BROWN}`bash --version`"
 echo -ne "${COLOR_NC}Uptime: "; uptime
 echo -ne "${COLOR_NC}Server time is: "; date
 
- #Load in .bashrc -------------------------------------------------
-source ~/.bashrc
+
 
