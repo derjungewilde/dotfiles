@@ -1,0 +1,26 @@
+# Help ------------------------------------------------------------
+
+alias help_rsync="echo -e '${COLOR_LIGHT_PURPLE} rsync help: 
+  ${COLOR_NC}To mirror a local folder (result will be /bar/foo): ${COLOR_CYAN}rsync_mirror /foo /bar
+  ${COLOR_NC}To mirror a local folder to remote with ssh: ${COLOR_CYAN}rsync_mirror -e "'"ssh -p 2222"'" foo user@server:~/bar
+  ${COLOR_NC}'"
+alias rsync_mirror="rsync -avh --numeric-ids"
+
+alias help_scp="echo -e '${COLOR_LIGHT_PURPLE} scp help: 
+  ${COLOR_NC}Copy from remote site (copies bar.zip from remote to local current folder): 
+  ${COLOR_CYAN}scp user@server.domain.com:/foo/bar.zip bar.zip
+  ${COLOR_NC}Same, but with port specified:
+  ${COLOR_CYAN}scp -P 2222 user@server.domain.com:/foo/bar.zip bar.zip
+  ${COLOR_NC}'"
+  
+alias help_installfromsource="echo -e '${COLOR_LIGHT_PURPLE}Install from source: 
+  ${COLOR_NC}tar xvzf package.tar.gz (or tar xvjf package.tar.bz2)
+  cd package
+  ./configure
+  make
+  make install'"
+
+alias help_nmap="echo -e '${COLOR_LIGHT_PURPLE}nmap: 
+  ${COLOR_NC}Netzwerk scannen: nmap -sP 192.168.1.1/24
+  ${COLOR_NC}Netzwerk schnell scannen mit OS Erkennung: nmap -sP -A -T4 192.168.1.1/24
+  '"
