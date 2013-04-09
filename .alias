@@ -1,19 +1,50 @@
+# Directory Listing
 alias ll='ls -laG'
 alias l.='ls -dl .* --color=auto' #show only hidden files
-alias colorslist="set | egrep 'COLOR_\w*'"  # lists all the colors
-
-alias df='df -h' # Show disk usage
 alias size='du -P -skh *' # Lists folders and files sizes in the current folder
-
-alias h=history
-alias top='top -o cpu' # sort by cpu usage
-
-alias psaux='ps aux'
-alias systail='tail -f /var/log/system.log' 
-alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr" # Shows most used commands
-alias untar="tar xvzf"
-
 alias cp_folder="cp -Rpv" #copies folder and all sub files and folders, preserving security and dates
 
-#### fix double open with entries 
-alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch";open -a XtraFinder'
+alias colorslist="set | egrep 'COLOR_\w*'"  # lists all the colors
+
+# Navigation
+alias -- -="cd -" #last used directory
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+# Shortcuts
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias vol="cd /Volumes"
+alias h="history"
+alias v="vim"
+alias o="open"
+
+# Utilities
+alias df='df -h' # Show disk usage
+alias top='top -o cpu' # sort by cpu usage
+alias psaux='ps aux'
+alias untar="tar xvzf"
+
+# Shows most used commands
+alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
+
+if [ "$OS" = "linux" ] ; then
+  alias systail='tail -f /var/log/syslog'
+else
+  alias systail='tail -f /var/log/system.log'
+fi
+
+# fix double open with entries, restart Finder
+alias lscleanup='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch";open -a TotalFinder'
+
+#OS X
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder;open -a TotalFinder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder;open -a TotalFinder"
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder;open -a TotalFinder"
+alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder;open -a TotalFinder"
+# Recursively delete `.DS_Store` files
+alias dscleanup="find . -type f -name '*.DS_Store' -ls -delete"
