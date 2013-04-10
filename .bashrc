@@ -55,6 +55,9 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 #### change history options
 HISTFILESIZE=1000000000 HISTSIZE=1000000
 
+# Keep the times of the commands in history.
+HISTTIMEFORMAT='%F %T  '
+
 #Ignore some commands in history
 export HISTIGNORE="cd:exit:..:...:ll:ls:l."
 
