@@ -18,41 +18,30 @@ export COLOR_GRAY='\033[1;30m'
 export COLOR_LIGHT_GRAY='\033[0;37m'
 
 
-
+# hard kill a process 
 killhard() {
     kill -9 "$1"
 }
 
-
-#### After each command, checks the windows size and changes lines and columns
+# After each command, checks the windows size and changes lines and columns
 shopt -s checkwinsize 
 
-
-
-#### note: bind is used instead of setting these in .inputrc.  This ignores case in bash completion
+# note: bind is used instead of setting these in .inputrc.  This ignores case in bash completion
 bind "set completion-ignore-case on"
 
-
-
-#### this allows you to automatically show completion without double tab-ing
+# this allows you to automatically show completion without double tab-ing
 bind "set show-all-if-ambiguous On" 
 
-
-
-#### Colors
+# Colors
 export TERM=xterm-color
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1 
-
-
 
 #### MacPorts Installer addition on 2011-07-30_at_19:15:20: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 #### Finished adapting your PATH environment variable for use with MacPorts.
 
-
-
-#### change history options
+# change history options
 HISTFILESIZE=1000000000 HISTSIZE=1000000
 
 # Keep the times of the commands in history.
