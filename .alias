@@ -20,6 +20,7 @@ alias vol="cd /Volumes"
 alias h="history"
 alias v="vim"
 alias o="open"
+alias showlib="chflags nohidden ~/Library"
 
 # Utilities
 alias df='df -h' # Show disk usage
