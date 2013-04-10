@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Check out submodules. The --git-dir option doesn't work here.
+cd "${HOME}/Dropbox/Dokumente/github/dotfiles"
+git submodule --quiet update --init
+cd "${OLDPWD}"
+
+# Link in files, replacing whatever's already there.
+ln -fs "Dropbox/Dokumente/github/dotfiles/.bashrc"        "${HOME}/.bashrc"
+ln -fs "Dropbox/Dokumente/github/dotfiles/.bash_profile"  "${HOME}/.bash_profile"
+ln -fs "Dropbox/Dokumente/github/dotfiles/.vimrc"         "${HOME}/.vimrc"
+ln -fs "Dropbox/Dokumente/github/dotfiles/.bashrc_help"   "${HOME}/.bashrc_help"
+ln -fs "Dropbox/Dokumente/github/dotfiles/".alias         "${HOME}/.alias"
+
