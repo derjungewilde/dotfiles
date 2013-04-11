@@ -71,6 +71,11 @@ shopt -s cdspell
 shopt -s extglob
 
 
+# get dotfiles from github
+git_down() {
+	curl -O https://raw.github.com/derjungewilde/dotfiles/master/$@
+}
+
 #### Bring in the other files
 . ~/.bashrc_help
 . ~/.alias
