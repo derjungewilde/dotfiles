@@ -24,3 +24,15 @@ alias help_nmap="echo -e '${COLOR_LIGHT_PURPLE}nmap:
   ${COLOR_NC}Netzwerk scannen: nmap -sP 192.168.1.1/24
   ${COLOR_NC}Netzwerk schnell scannen mit OS Erkennung: nmap -sP -A -T4 192.168.1.1/24
   '"
+
+alias help_ll="echo -e '${COLOR_LIGHT_PURPLE}ll mit extglob pattern:
+  ${COLOR_CYAN}?(pattern-list)${COLOR_NC}: Matches zero or one occurrence of the given patterns
+  ${COLOR_CYAN}*(pattern-list)${COLOR_NC}: Matches zero or more occurrences of the given patterns
+  ${COLOR_CYAN}+(pattern-list)${COLOR_NC}: Matches one or more occurrences of the given patterns
+  ${COLOR_CYAN}@(pattern-list)${COLOR_NC}: Matches one of the given patterns
+  ${COLOR_CYAN}!(pattern-list)${COLOR_NC}: Matches anything except one of the given patterns
+
+  ${COLOR_NC}So, for example, if you wanted to list all the files in the current directory that are not .c or .h files, you would do
+  ${COLOR_LIGHT_PURPLE}$ ls -d !(*@(.c|.h))
+${COLOR_NC}
+'"
