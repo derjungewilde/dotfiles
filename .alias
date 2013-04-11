@@ -27,6 +27,8 @@ alias df='df -h' # Show disk usage
 alias top='top -o cpu' # sort by cpu usage
 alias psaux='ps aux'
 alias untar="tar xvzf"
+alias localip="ipconfig getifaddr en0"
+alias worldip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 
 # Shows most used commands
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
