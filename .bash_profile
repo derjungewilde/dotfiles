@@ -9,8 +9,6 @@ export PLATFORM="$MACHINE-$OS-$OSVERSION"
 # Note, default OS is assumed to be OSX
 
 # Hello Messsage --------------------------------------------------
-echo -e "Kernel Information: " `uname -smr`
-echo -e "${COLOR_BROWN}`bash --version`"
 echo -ne "${COLOR_NC}Uptime: "; uptime
 echo -ne "${COLOR_NC}Server time is: "; date
 
