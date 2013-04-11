@@ -67,6 +67,9 @@ shopt -s histappend
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
+# Enable advanced pattern matching.
+shopt -s extglob
+
 
 #### Bring in the other files
 . ~/.bashrc_help
