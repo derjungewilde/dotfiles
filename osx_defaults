@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# This is a file where I will collect all the defaults writes for OS X. If you have one that is not in this file,
+# feel free to edit and commit your changes.
+
+#Credits to:
+#https://github.com/mathiasbynens
+#https://github.com/necolas
+#https://github.com/cowboy
+
 ###############################################################################
 # General UI/UX #
 ###############################################################################
