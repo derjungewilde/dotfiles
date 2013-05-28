@@ -220,7 +220,7 @@ defaults write com.apple.Mail DisableReplyAnimations -bool true
 defaults write com.apple.Mail DisableSendAnimations -bool true
 
 # Disable automatic Attachment preview in Mail
-defaultswrite com.apple.mail DisableInlineAttachmentViewing -booltrue
+defaultswrite com.apple.mail DisableInlineAttachmentViewing -bool true
 
 # Disable Resume system-wide
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true
