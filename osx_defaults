@@ -134,6 +134,8 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Hide the "go to folder" menu
 defaults write com.apple.finder ProhibitGoToFolder -bool true
 
+# Enable Quicklook Text Selection
+defaults write com.apple.finder QLEnableTextSelection  -bool true
 
 ###############################################################################
 # Dock, Menu Bar & hot corners #
