@@ -1,6 +1,6 @@
 # Directory Listing
-alias ll='ls -laG'
-alias l.='ls -dl .* --color=auto' #show only hidden files
+alias ll='ls -laGh'
+alias l.='ls -dlh .* --color=auto' #show only hidden files
 alias size='du -P -skh *' # Lists folders and files sizes in the current folder
 alias cp_folder="cp -Rpv" #copies folder and all sub files and folders, preserving security and dates
 
@@ -51,3 +51,7 @@ alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && kill
 alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder;open -a TotalFinder"
 # Recursively delete `.DS_Store` files
 alias dscleanup="find . -type f -name '*.DS_Store' -ls -delete"
+#show complete download history
+alias showdownloadDB="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
+# delete complete download history
+alias deletedownloadDB="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
