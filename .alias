@@ -40,15 +40,15 @@ else
 fi
 
 # fix double open with entries, restart Finder
-alias lscleanup='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch";open -a TotalFinder'
+alias lscleanup='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
 
 #OS X
 # Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder;open -a TotalFinder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder;open -a TotalFinder"
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 # Show/hide hidden files in Finder
-alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder;open -a TotalFinder"
-alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder;open -a TotalFinder"
+alias show="defaults write com.apple.finder AppleShowAllFiles TRUE;killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles FALSE;killall Finder"
 # Recursively delete `.DS_Store` files
 alias dscleanup="find . -type f -name '*.DS_Store' -ls -delete"
 #show complete download history
