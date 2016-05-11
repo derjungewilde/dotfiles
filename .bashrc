@@ -51,7 +51,7 @@ HISTTIMEFORMAT='%F %T  '
 export HISTIGNORE="cd:exit:..:...:ll:ls:l."
 
 # this pipes all defaults commands in txt document to keep track of all used defaults changes
-PROMPT_COMMAND='echo "$(history 1 | grep "defaults")" | sed '/^$/d' >> ~/Dropbox/Dokumente/defaults_MacbookPro.txt'
+#PROMPT_COMMAND='echo "$(history 1 | grep "defaults")" | sed '/^$/d' >> ~/Dropbox/Dokumente/defaults_MacbookPro.txt'
 
 # use hf and the word to search in the history
 hf(){ 
